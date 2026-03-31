@@ -8,6 +8,7 @@ if "data" not in st.session_state:
     st.session_state.data = []
 
 # input
+st.subheader("Add a New Expense")
 date = st.date_input("Date")
 item = st.text_input("Expense Item")
 amount = st.text_input("Amount (RM)")
@@ -25,7 +26,7 @@ if st.button("Add Expense"):
                 "Item": item,
                 "Amount": amount
             })
-            st.success(f"Expense '{item}' added!")
+            st.success(f"Expense '{item}' added successfully!")
 
     except:
         st.error("Amount must be a number!")
