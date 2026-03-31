@@ -10,8 +10,10 @@ if "data" not in st.session_state:
 # input
 st.subheader("Add a New Expense")
 date = st.date_input("Date")
-item = st.text_input("Expense Item")
+item = st.text_input("Expense Item" expense_options)
 amount = st.text_input("Amount (RM)")
+
+expense_options = ["Food", "Transport", "Saving", "Car Loan", "Shopping"]
 
 # button
 if st.button("Add Expense"):
