@@ -12,7 +12,7 @@ expense_options = ["Food", "Transport", "Saving", "Car Loan", "Shopping"]
 # input
 st.subheader("Add a New Expense")
 date = st.date_input("Date")
-item = st.text_input("Expense Item", expense_options)
+item = st.selectbox("Expense Item", expense_options)
 amount = st.text_input("Amount (RM)")
 
 
